@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RIDE — современный сайт о велосипедах: зачем крутить педали, какой велик выбрать и как начать. Стиль, здоровье, свобода." />
+  <title>RIDE — жизнь на двух колёсах</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ФОНОВЫЕ БЛИКИ -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__logo">RIDE<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#benefits">Плюсы</a>
+      <a href="#types">Виды</a>
+      <a href="#start">С чего начать</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#start" class="btn btn--sm nav__cta">Погнали →</a>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="hero__tag reveal">🚴 движение = жизнь</p>
+      <h1 class="hero__title reveal">
+        Пересядь на <span class="grad">велосипед</span><br />и почувствуй город заново
+      </h1>
+      <p class="hero__sub reveal">
+        Без пробок, без бензина, без спортзала. Только ты, скорость и свобода.
+        Разбираемся, почему два колеса — это новый вайб.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#benefits" class="btn">Узнать плюсы</a>
+        <a href="#types" class="btn btn--ghost">Выбрать велик</a>
+      </div>
+    </div>
+    <div class="hero__scroll reveal">крути вниз ↓</div>
+  </section>
+
+  <!-- СТАТИСТИКА -->
+  <section class="stats">
+    <div class="stat">
+      <span class="stat__num" data-count="500">0</span><span class="stat__plus">+</span>
+      <p>ккал за час лёгкой поездки</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="0">0</span><span class="stat__plus"> г</span>
+      <p>выбросов CO₂ на километр</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="15">0</span><span class="stat__plus"> км/ч</span>
+      <p>средняя скорость в городе</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="30">0</span><span class="stat__plus">%</span>
+      <p>меньше стресса по данным исследований</p>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="section" id="benefits">
+    <div class="section__head reveal">
+      <span class="eyebrow">Почему стоит</span>
+      <h2>Велосипед прокачивает <span class="grad">всё сразу</span></h2>
+      <p>Одно решение — а бонусов на каждый день недели.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__ico">💪</div>
+        <h3>Здоровье</h3>
+        <p>Сердце, лёгкие, ноги и осанка. Мягкая кардио-нагрузка без ударов по суставам.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🌍</div>
+        <h3>Экология</h3>
+        <p>Ноль выхлопов и шума. Чистый воздух в городе начинается с твоего маршрута.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">💸</div>
+        <h3>Экономия</h3>
+        <p>Ни бензина, ни билетов, ни платной парковки. Велосипед окупается за месяцы.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">⚡</div>
+        <h3>Скорость</h3>
+        <p>В час пик по городу байк часто быстрее машины и метро. И без пробок.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">😌</div>
+        <h3>Настроение</h3>
+        <p>Эндорфины, свежий ветер и голова на перезагрузке. Лучший антистресс.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🤝</div>
+        <h3>Комьюнити</h3>
+        <p>Массовые заезды, друзья, новые места. Целая культура вокруг двух колёс.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ВИДЫ -->
+  <section class="section section--alt" id="types">
+    <div class="section__head reveal">
+      <span class="eyebrow">Твой стиль</span>
+      <h2>Какой <span class="grad">велик</span> твой?</h2>
+      <p>Разные задачи — разные байки. Найди свой характер.</p>
+    </div>
+    <div class="types" id="typesGrid"></div>
+  </section>
+
+  <!-- С ЧЕГО НАЧАТЬ -->
+  <section class="section" id="start">
+    <div class="section__head reveal">
+      <span class="eyebrow">Первый шаг</span>
+      <h2>Начать <span class="grad">проще</span>, чем кажется</h2>
+      <p>Четыре шага — и ты уже катишь.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__n">01</span>
+        <h3>Определись с целью</h3>
+        <p>Город, спорт или прогулки? От этого зависит выбор байка.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">02</span>
+        <h3>Подбери размер</h3>
+        <p>Рама под твой рост — залог комфорта и здоровой спины.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">03</span>
+        <h3>Возьми базовую экипировку</h3>
+        <p>Шлем, свет, замок и насос. Минимум для безопасности.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">04</span>
+        <h3>Просто поезжай</h3>
+        <p>Начни с коротких маршрутов рядом с домом — и втянешься.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ЦИТАТА -->
+  <section class="quote reveal">
+    <blockquote>
+      «Жизнь — как велосипед. Чтобы держать равновесие,<br />нужно двигаться вперёд.»
+    </blockquote>
+    <cite>— Альберт Эйнштейн</cite>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="section__head reveal">
+      <span class="eyebrow">Частые вопросы</span>
+      <h2>Коротко о <span class="grad">важном</span></h2>
+    </div>
+    <div class="faq">
+      <details class="faq__item reveal">
+        <summary>Нужна ли специальная подготовка?</summary>
+        <p>Нет. Если умеешь держать равновесие — ты готов. Мышцы и выносливость подтянутся сами за пару недель.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>А если на улице дождь или зима?</summary>
+        <p>Крылья, свет и правильная одежда решают почти всё. Тысячи людей катают круглый год — вопрос экипировки, а не сезона.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Дорого ли это?</summary>
+        <p>Надёжный городской велосипед стоит как несколько месяцев проездного, а служит годами. Дальше — почти бесплатное передвижение.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Это безопасно в городе?</summary>
+        <p>Да, если соблюдать правила, быть заметным и предсказуемым. Шлем, свет и внимание снижают риски в разы.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Готов почувствовать <span class="grad">свободу?</span></h2>
+    <p>Твой лучший маршрут начинается с первого оборота педали.</p>
+    <a href="#top" class="btn btn--lg">Поехали 🚴‍♂️</a>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="footer__logo">RIDE<span>.</span></div>
+    <p>Сделано с любовью к двум колёсам. Крути педали — живи ярче.</p>
+    <div class="footer__links">
+      <a href="#benefits">Плюсы</a>
+      <a href="#types">Виды</a>
+      <a href="#start">Старт</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <small>© 2026 RIDE. Все дороги открыты.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
