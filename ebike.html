@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="eBIKE — электровелосипеды нового поколения. Батарея, мотор, стиль и свобода без усталости." />
+  <title>eBIKE — электро по жизни</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .ebike-hero { background: linear-gradient(135deg, rgba(34, 224, 200, 0.15), rgba(255, 176, 32, 0.1)); }
+    .ebike-accent { color: #ffb020; }
+    .battery-bar {
+      height: 12px; border-radius: 20px; background: var(--stroke);
+      overflow: hidden; margin: 12px 0;
+    }
+    .battery-fill {
+      height: 100%; background: linear-gradient(90deg, #22e0c8, #ffb020);
+      border-radius: 20px; transition: width .6s ease;
+    }
+    .specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+    .spec-card {
+      background: var(--card); border: 1px solid var(--stroke); border-radius: 16px;
+      padding: 20px; text-align: center;
+    }
+    .spec-num { font-family: "Unbounded", sans-serif; font-size: 1.8rem; color: #ffb020; font-weight: 800; }
+    .spec-label { color: var(--muted); font-size: .9rem; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <!-- ФОНОВЫЕ БЛИКИ -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb--1" style="background: #ffb020;"></span>
+    <span class="orb orb--2" style="background: #22e0c8;"></span>
+    <span class="orb orb--3" style="background: #ffb020; opacity: 0.25;"></span>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="nav" id="top">
+    <a href="index.html" class="nav__logo">eBIKE<span>⚡</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html">Назад к RIDE</a>
+      <a href="#why">Зачем электро</a>
+      <a href="#battery">Батареи</a>
+      <a href="#models">Модели</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#models" class="btn btn--sm nav__cta">Выбрать ⚡</a>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero ebike-hero">
+    <div class="hero__inner">
+      <p class="hero__tag reveal">⚡ будущее здесь</p>
+      <h1 class="hero__title reveal">
+        Мотор-помощник<br />и <span class="grad ebike-accent">никаких ограничений</span>
+      </h1>
+      <p class="hero__sub reveal">
+        Дальше ехать, меньше крутить, больше наслаждаться. Электровелосипед — это не лень, это смарт.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#models" class="btn">Смотреть модели</a>
+        <a href="#why" class="btn btn--ghost">Почему электро</a>
+      </div>
+    </div>
+    <div class="hero__scroll reveal">крути вниз ↓</div>
+  </section>
+
+  <!-- БЫСТРЫЕ ФАКТЫ -->
+  <section class="stats">
+    <div class="stat">
+      <span class="stat__num" data-count="80">0</span><span class="stat__plus"> км</span>
+      <p>на одной зарядке</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="32">0</span><span class="stat__plus"> км/ч</span>
+      <p>максимальная скорость</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="4">0</span><span class="stat__plus"> ч</span>
+      <p>полная зарядка</p>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="70">0</span><span class="stat__plus">%</span>
+      <p>меньше усилий, результат же</p>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="section" id="why">
+    <div class="section__head reveal">
+      <span class="eyebrow">Почему электро</span>
+      <h2>Педали — опция, не <span class="grad ebike-accent">обязанность</span></h2>
+      <p>Мотор делает поездки доступнее, интереснее и... веселее.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__ico">⛰️</div>
+        <h3>Горы? Легко</h3>
+        <p>Подъём на холм — уже не вызов. Мотор подталкивает, ты наслаждаешься видом.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🚴</div>
+        <h3>Без усталости</h3>
+        <p>Педалируй столько, сколько хочешь. Когда устал — включи педал-ассист.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">📍</div>
+        <h3>Дальше едешь</h3>
+        <p>80+ км на батарее? Без проблем. Развозишь всю семью — везет.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🚦</div>
+        <h3>Быстрее в пути</h3>
+        <p>32 км/ч и ты уже быстрее половины машин в пробке.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🧓</div>
+        <h3>Для всех возрастов</h3>
+        <p>Бабушке 70, внуку 7 — оба катят на электро с одинаковым кайфом.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__ico">🔌</div>
+        <h3>Дома зарядишь</h3>
+        <p>Обычная розетка, обычный провод. Зарядился за 4 часа — в путь.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- БАТАРЕЙНЫЙ РАЗДЕЛ -->
+  <section class="section section--alt" id="battery">
+    <div class="section__head reveal">
+      <span class="eyebrow">Сердце электробайка</span>
+      <h2>Батарея — всё <span class="grad ebike-accent">решает</span></h2>
+      <p>От емкости батареи зависит дальность, скорость и стиль жизни.</p>
+    </div>
+    <div id="batteryTypes"></div>
+  </section>
+
+  <!-- ТИПОВЫЕ МОДЕЛИ -->
+  <section class="section" id="models">
+    <div class="section__head reveal">
+      <span class="eyebrow">Выбери свою</span>
+      <h2>Модели на любой <span class="grad ebike-accent">бюджет</span> и стиль</h2>
+      <p>От компактного городского до мощного внедорожника.</p>
+    </div>
+    <div id="modelsGrid"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="section__head reveal">
+      <span class="eyebrow">Вопросы</span>
+      <h2>Всё о <span class="grad ebike-accent">электро</span>, коротко</h2>
+    </div>
+    <div class="faq">
+      <details class="faq__item reveal">
+        <summary>Как работает педал-ассист?</summary>
+        <p>Датчики фиксируют твоё педалирование, мотор подключается автоматически и помогает крутить. Ты педалируешь, мотор усиливает — вместе легче.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Как долго служит батарея?</summary>
+        <p>Качественная батарея держит 500–1000 полных циклов зарядки. Это 3–5 лет интенсивного использования. Потом теряет ёмкость, но продолжает работать.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Холод убивает батарею?</summary>
+        <p>В мороз батарея работает менее эффективно, но не ломается. Дома заряжай, на улице катай — всё нормально.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Стоит ли электро таких денег?</summary>
+        <p>Если ездишь на работу каждый день — окупается за год-два. Если катаешь для кайфа — это инвестиция в здоровье и настроение, а они дороже.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Мотор отломается в аварии?</summary>
+        <p>Моторы монтируются крепко. Возможны повреждения, как на обычном байке, но мотор обычно выживает.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Готов прыгнуть на <span class="grad ebike-accent">электро?</span></h2>
+    <p>Первая поездка — и поймёшь, почему ты об этом раньше не думал.</p>
+    <a href="#top" class="btn btn--lg">Выбрать модель ⚡</a>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="footer__logo">eBIKE<span>⚡</span></div>
+    <p>Электричество встречает педали. Вместе это магия.</p>
+    <div class="footer__links">
+      <a href="index.html">На главную</a>
+      <a href="#why">Плюсы</a>
+      <a href="#battery">Батареи</a>
+      <a href="#models">Модели</a>
+    </div>
+    <small>© 2026 eBIKE. Крутим будущее.</small>
+  </footer>
+
+  <script src="ebike-script.js"></script>
+</body>
+</html>
